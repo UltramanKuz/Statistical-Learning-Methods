@@ -4,7 +4,7 @@ import tqdm
 
 
 
-def load_data(file_path):
+def loadData(file_path):
     """
     加载Mnist数据，返回数据集和标签
     """
@@ -63,8 +63,8 @@ def test(data, label, w, b):
     return 1 - error_rate
 
 if __name__ == '__main__':
-    train_data, train_label = load_data('../mnist_train.csv')
-    test_data, test_label = load_data('../mnist_test.csv')
+    train_data, train_label = loadData('../mnist_train.csv')
+    test_data, test_label = loadData('../mnist_test.csv')
     w, b = train(train_data, train_label)
     acc = test(test_data, test_label, w, b)
     print('The accuracy is %.2f' % acc)
